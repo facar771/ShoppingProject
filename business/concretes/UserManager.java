@@ -1,11 +1,13 @@
 package projects.shoppingSite.business.concretes;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import projects.shoppingSite.business.abstracts.UserServise;
 import projects.shoppingSite.dataAccess.abstracts.UserRepository;
 import projects.shoppingSite.entities.User;
 
+@Service
 public class UserManager implements UserServise{
 
     private	UserRepository userRepository;

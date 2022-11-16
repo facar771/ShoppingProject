@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,5 +25,15 @@ public class ProductController {
 	@GetMapping("/getall")
 	public List<Product> getAll(){
 		return productServise.getAll();
+	}
+	
+	@PostMapping("/add")
+	public void add(Product product) {
+		productServise.add(product);
+	}
+	
+	@PostMapping("/delete")
+	public void delete(Product product) {
+		productServise.delete(product);
 	}
 }
