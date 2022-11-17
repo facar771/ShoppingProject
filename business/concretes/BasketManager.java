@@ -4,6 +4,7 @@ import java.util.List;
 
 import projects.shoppingSite.business.abstracts.BasketService;
 import projects.shoppingSite.dataAccess.abstracts.BasketRepository;
+import projects.shoppingSite.entities.Basket;
 import projects.shoppingSite.entities.Product;
 
 public class BasketManager implements BasketService{
@@ -15,7 +16,7 @@ public class BasketManager implements BasketService{
 	}
 	
 	@Override
-	public List<Product> getAll(Product product) {
-		return basketRepository.findAll();
+	public List<Product> getBasket(Basket basket) {
+	    return basket.getProducts();
 	}
 }

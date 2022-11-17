@@ -6,5 +6,5 @@ import projects.shoppingSite.entities.Basket;
 import projects.shoppingSite.entities.Product;
 
 public interface BasketService {
-	List<Product> getAll(Basket basket);
+	List<Product> getBasket(Basket basket);
 }
