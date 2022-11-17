@@ -8,6 +8,5 @@ import lombok.Data;
 public class Basket {
 	private int id;
 	private int totalPrice;
-	private User user;
 	private List<Product> products;
 }

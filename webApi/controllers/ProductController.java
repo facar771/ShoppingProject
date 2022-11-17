@@ -8,32 +8,39 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import projects.shoppingSite.business.abstracts.ProductServise;
+import projects.shoppingSite.business.abstracts.ProductService;
 import projects.shoppingSite.entities.Product;
 
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
 	
-	private ProductServise productServise;
+	private ProductService productService;
 	
 	@Autowired
-	public ProductController(ProductServise productServise) {
-		this.productServise = productServise;
+	public ProductController(ProductService productService) {
+		this.productService = productService;
 	}
 	
-	@GetMapping("/getall")
-	public List<Product> getAll(){
-		return productServise.getAll();
-	}
-	
+	// KULLANICINIIN KONTROL EDEMEDİĞİ BÖLÜM
 	@PostMapping("/add")
 	public void add(Product product) {
-		productServise.add(product);
+		productService.add(product);
 	}
 	
 	@PostMapping("/delete")
 	public void delete(Product product) {
-		productServise.delete(product);
+		productService.delete(product);
+	}
+	
+	@PostMapping("/update")
+	public void update(Product product) {
+		productService.update(product);
+	}
+	
+	// KULLANICINIIN İSTEKTE BULUNDUĞU KISIM
+	@GetMapping("/getall")
+	public List<Product> getAll(){
+		return productService.getAll();
 	}
 }

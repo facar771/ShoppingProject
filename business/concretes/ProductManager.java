@@ -5,12 +5,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import projects.shoppingSite.business.abstracts.ProductServise;
+import projects.shoppingSite.business.abstracts.ProductService;
 import projects.shoppingSite.dataAccess.abstracts.ProductRepository;
 import projects.shoppingSite.entities.Product;
 
 @Service
-public class ProductManager implements ProductServise{
+public class ProductManager implements ProductService{
 
 	private ProductRepository productRepository;
 	
