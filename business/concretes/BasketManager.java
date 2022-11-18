@@ -17,6 +17,9 @@ public class BasketManager implements BasketService{
 	
 	@Override
 	public List<Product> getBasket(Basket basket) {
-	    return basket.getProducts();
+		Basket basket2 = new Basket();
+		basket2 = basketRepository.findById(basket.getId()).get();
+		
+	    return basket2.getProducts();
 	}
 }

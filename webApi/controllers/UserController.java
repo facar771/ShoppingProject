@@ -6,26 +6,32 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import projects.shoppingSite.business.abstracts.UserService;
+import projects.shoppingSite.business.abstracts.asdads;
 import projects.shoppingSite.entities.User;
 
 @RestController
 @RequestMapping("api/users")
 public class UserController {
 	
-	private UserService userService;
-	
-	@Autowired
-	public UserController(UserService userServise) {
-		this.userService = userServise;
+	public void bok() {
+		asdads asdads = new asdads();
+		asdads.add();
 	}
 	
-	@PostMapping("/singin")
-	void signIn(User user) {
-		userService.signIn(user);
-	}
-	
-	@PostMapping("/login")
-	void login(User user) {
-		userService.login(user);
-	}
+//	private UserService userService;
+//	
+//	@Autowired
+//	public UserController(UserService userServise) {
+//		this.userService = userServise;
+//	}
+//	
+//	@PostMapping("/singin")
+//	void signIn(User user) {
+//		userService.signIn(user);
+//	}
+//	
+//	@PostMapping("/login")
+//	void login(User user) {
+//		userService.login(user);
+//	}
 }
